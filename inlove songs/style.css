@@ -1,0 +1,144 @@
+/* import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Mono", sans-serif;
+}
+body{
+    background-color: #B7E5DD;
+}
+
+/*nav bar css start*/
+
+.navbar_container{
+    width: 100%;
+    text-align: center;
+}
+
+nav{
+    background: #BCCC9A;
+    border-radius: 50px;
+    padding: 10px;
+    box-shadow: 0 25px 20 px rgba(0,0,0,0.4);
+}
+
+.nav_link {
+    text-decoration: none;
+    color: #777;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 13px 35px;
+    margin: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #D5ECC2;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color 0.5s;
+}
+
+nav ul li::after {
+    content: "";
+    background: #202124;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0;
+    transition: top 0.5s, opacity 0.5s;
+}
+
+nav ul li:hover a {
+    color: #BCCC9A ;
+}
+
+nav ul li:hover::after {
+    top: 50%;
+    opacity: 1;
+}
+
+/*nav bar css end */
+
+/* music player css start */
+
+.music_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 40px;
+    margin: 75px;
+    background: #7895B2;
+    border: 10px solid #AEBDCA;
+    border-radius: 40px;
+    box-shadow: 0 45px 40px -30px rgb(rgb(222, 182, 171)); 
+}
+
+.music_player {
+    position: relative;
+    margin: 0px 50px;
+    width: 350px;
+    background: #f1f3f4;
+    box-shadow: 0 20px 50px rgba(255, 255, 255, 0.25);
+}
+
+.music_player .music_cover {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    border: 10px solid #f1f3f4;
+}
+
+.music_player .music_cover img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.music_player audio {
+    width: 100%;
+    outline: none;
+}
+
+.music_detail {
+    position: relative;
+    color: white;
+    text-align: left;
+}
+
+.music_title {
+    font-size: 40px;
+    letter-spacing: 6px;
+}
+
+.music_artist {
+    font-size: 35px;
+    letter-spacing: 6px;
+    line-height: 60px;
+}
+
+.music_mood {
+    font-size: 12px;
+    letter-spacing: 2px;
+    line-height: 25px;
+}
+
+/* music player css end */
+
+pre{
+    text-align: center;
+}

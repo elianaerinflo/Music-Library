@@ -1,0 +1,221 @@
+/* import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-image: url(../media/dl.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+/*nav bar css start*/
+
+.navbar_container{
+    width: 100%;
+    text-align: center;
+}
+
+nav{
+    background: #BCCC9A;
+    border-radius: 50px;
+    padding: 10px;
+    box-shadow: 0 25px 20 px rgba(0,0,0,0.4);
+}
+
+.nav_link {
+    text-decoration: none;
+    color: #777;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 13px 35px;
+    margin: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #BCCC9A;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color 0.5s;
+}
+
+nav ul li::after {
+    content: "";
+    background: #202124;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0;
+    transition: top 0.5s, opacity 0.5s;
+}
+
+nav ul li:hover a {
+    color: #fff ;
+}
+
+nav ul li:hover::after {
+    top: 50%;
+    opacity: 1;
+}
+
+/*nav bar css end */
+
+
+/*image hover overlay - start */
+
+.container{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0px;
+    width: 100%;
+}
+
+.container .card {
+    position: relative;
+    width: 320px;
+    height: 300px;
+    margin: 15px;
+    overflow: hidden;
+}
+
+.container .card .imgBx 
+.container .card .contentBx {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container .card .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.container .card .contentBx::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50;
+    width: 100%;
+    height: 100%;
+    background: #E7FBBE;
+    transform: scaleX(0);
+    transition: transform 0.5s ease-in-out;
+    transform-origin: left;
+}
+
+.container .card:hover .contentBx::before{
+    transform: scaleX(1);
+    transition: transform 0.5s ease-in-out;
+    transform-origin: left;
+}
+
+.container .card .contentBx{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .card .contentBx .content{
+    position: relative;
+    padding: 30px;
+    z-index: 1;
+    transition: 0.5s;
+    transform: translateX(-300px);
+    transition-delay: 0s;
+}
+
+.container .card:hover .contentBx .content{
+    transform: translateX(0px);
+    transition-delay: 0.5s;
+}
+
+.container .card  .contentBx .content h3{
+    font-size: 1.3em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.container .card .contentBx .content p{
+    font-size: 1em;
+    line-height: 1.4em;
+    font-weight: 300;
+
+}
+
+/* image hover overlay - end */
+
+/* about button start*/
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 20px 50px;
+    font-size: 17px;
+    position: relative;
+    margin: 10px;
+}
+
+/* Button 1*/
+
+.btn-1 {
+    background: #D9D7F1;
+    color: #EF2F88;
+    border-radius: 40px;
+    transition: transform 0.3 ease;
+}
+
+.btn-1::after, .btn-1::before {
+    content: "";
+    position: absolute;
+    opacity: 0.3;
+    background: #FFCBCB;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: transform 0.3s ease;
+}
+
+.btn-1:hover {
+    transform: translate(-12px, -12px);
+}
+
+.btn-1:hover::after {
+    transform: translate(6px, 6px);
+}
+
+.btn-1:hover::before {
+    transform: translate(12px, 12px);
+}
+
+/* about button end */
+
